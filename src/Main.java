@@ -7,10 +7,101 @@ public class Main {
 		//doubleSample();
 		//booleanSample();
 		//compareSample();
-		stringSample();
-		//charSample();
+		// stringSample();
+		// charSample();
+		arraySample();
 		//loopSample();
 
+	}
+
+	private static void arraySample() {
+		// TODO Auto-generated method stub
+		int[] ar1 = {1,2,3,4,5,6};
+		System.out.println(ar1[1]+","+ar1[5]);
+		
+		char[] ar2 = {'A', 'd', 'F', 'g'};
+		System.out.println(ar2[0]+","+ar2[3]);
+		
+		String[] ar3 = {"I", "am a", "Teacher", "Student", "!", "."};
+		System.out.println(ar3[0]+" "+ar3[1]+" "+ar3[2]+ar3[4]);
+		System.out.println(ar3[0]+" "+ar3[1]+" "+ar3[3]+ar3[5]);
+		
+		int[] ar4=null;
+		ar4 = new int[5];
+		System.out.println("length of ar4 is:"+ar4.length);
+		for (int i=0;i<ar4.length;i++) { // for(init;condition;update), i++ --> i+=1 -->i=i+1
+			System.out.print(ar4[i]+",");
+		}
+		System.out.println();
+		
+		ar4[0] = 100;
+		ar4[3] = 20;
+		ar4[4] = 15;
+		
+		for (int i=0;i<ar4.length;i++) { // for(init;condition;update), i++ --> i+=1 -->i=i+1
+			System.out.print(ar4[i]+",");
+		}
+		System.out.println();
+		
+		int start = 123;
+		for (int i=0;i<ar4.length;i++) {
+			ar4[i] = start;
+			start += 5; // start = start+5;
+		}
+		
+		for (int i=0;i<ar4.length;i++) { // for(init;condition;update), i++ --> i+=1 -->i=i+1
+			System.out.print(ar4[i]+",");
+		}
+	}
+
+	private static void charSample() {
+		// TODO Auto-generated method stub
+		char c1 = 'A';
+		char c2 = 'b';
+		
+		String s = "adfsafdsa+++";
+		s = s+c1;
+		
+		System.out.println(s);
+		s += c2;
+		System.out.println(s);
+		
+		char c3=s.charAt(10);
+		System.out.println(c3);
+		
+		System.out.println(c1-c2);
+		System.out.println(c1+c2);
+		System.out.println("here it is:"+c1);
+		System.out.println("there it is:"+c1+c2);
+		System.out.println("Now you see what:"+(c1+c2));
+		
+		// print the ascii code for '*'
+		int i1 = '*';
+		System.out.println((int)'*');
+		System.out.println(i1);
+		
+		// print 10th character after letter 'D'
+		c1 = 'D'+10;
+		System.out.println((char)('D'+10));
+		System.out.println(c1);
+		
+		c2 = 44;
+		System.out.println(c2);
+		
+		c1 = '我';
+		System.out.println(c1);
+		System.out.println((int)c1);
+		
+		// print 120th character after 'T', wrap around after 'Z';
+		System.out.println((char)('T'+120));
+		System.out.println( (char)((('T'-'A')+120)%26+'A') );
+		// take 'A' as the starting point, we calculate the offset. 
+		int offsetToA = 'T'-'A'; // offset of 'T';
+		offsetToA += 120;  // offset of target character.
+		offsetToA %= 26;   // we have 26 characters, we need to wrap around.
+		c1 = (char) ('A'+offsetToA); // get the target character asscii code;
+		System.out.println(c1);
+		
 	}
 
 	private static void stringSample() {
